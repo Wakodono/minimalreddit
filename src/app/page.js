@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import Posts from '@/components/Posts'
 
 export default function Home() {

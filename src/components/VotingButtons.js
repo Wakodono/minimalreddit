@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import styles from '../app/page.module.scss'
 
 const VotingButtons = ({ initialVotes }) => {
     const [votes, setVotes] = useState(0);
@@ -17,10 +18,17 @@ const VotingButtons = ({ initialVotes }) => {
     };
 
     return (
-        <div>
-            <button onClick={handleUpvote}>Upvote</button>
-            <span>{initialVotes}</span>
-            <button onClick={handleDownvote}>Downvote</button>
+        <div className={styles.votingButtons}>
+            <button onClick={handleUpvote}>Upvote
+                <span role='img' aria-label='Upvote'>
+                    👍
+                </span>
+            </button>
+            <button onClick={handleDownvote}>Downvote
+                <span role='img' aria-label='Downvote'>
+                    👎
+                </span>
+            </button>
         </div>
     );
 };
